@@ -127,4 +127,18 @@ clouds:
       password: "this should be overwritten by secure.yaml"
       project_name: "Some Project"
     region_name: "PHL"
+  overridden_auth:
+    auth:
+      username: "jdoe"
+      password: "password"
+      project_name: "Some Project"
+    regions:
+      - name: Region 1
+        values:
+          auth:
+            auth_url: "region1.example.com:5000/v3"
+      - name: Region 2
+        values:
+          auth:
+            auth_url: "region2.example.com:5000/v3"
 

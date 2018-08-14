@@ -477,3 +477,15 @@ var LegacyCloudYAML = clientconfig.Clouds{
 		"yukon":   YukonCloudYAML,
 	},
 }
+
+var OverriddenAuthCloudYAML = clientconfig.Cloud{
+	Regions:  []interface{}{"Region 1", "Region 2"},
+	AuthType: clientconfig.AuthPassword,
+	AuthInfo: &clientconfig.AuthInfo{
+		Username:       "jdoe",
+		Password:       "password",
+		ProjectName:    "Some Project",
+		UserDomainName: "Some Domain",
+		DefaultDomain:  "default",
+	},
+}
